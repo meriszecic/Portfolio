@@ -8,18 +8,6 @@
   </head>
   <body>
     <div class="container">
-      <!-- <ul>
-        <div class="image">
-          <li>
-            <a href="#"><img src="#" alt="My photo" /></a>
-          </li>
-        </div>
-        <div class="list-items">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Contact</a></li>
-        </div>
-      </ul> -->
       <!-- 💻 -->
       <div class="top-content">
         <div class="top-content-text">
@@ -43,9 +31,9 @@
             >I first became interested in programming 2 years ago, when I
             started my first programming course where I learned HTML, CSS,
             JavaScript and React. That was my introduction to the web and
-            programming languages<span id="tackice">... </span>
+            programming languages<span id="tackice">...</span>
             <br />
-            <span id="more-text">
+            <span id="more-text" style="display: none">
               Wanting to learn as much as possible after that completed course,
               I started another one where I additionally perfected HTML, CSS,
               JavaScript and React.
@@ -54,7 +42,7 @@
               position.</span
             >
           </label>
-          <button onclick="showMOre()" id="dugme">show more</button>
+          <button onclick="showMore()" id="dugme">Show More</button>
         </div>
         <div class="top-content-image">
           <img src="#" alt="My photo" />
@@ -62,18 +50,19 @@
       </div>
     </div>
     <script>
-      function showMore() {}
-      let tackice = document.getElementById('tackice');
-      let moreTekst = document.getElementById('more-text');
-      let dugem = document.getElementById('dugme');
-      if (tackice.style.display === 'none') {
-        moreTekst.style.display = 'none';
-        tackice.style.display = 'inline';
-        dugem.innerHTML = 'Show More';
-      } else {
-        moreTekst.style.display = 'flex';
-        tackice.style.display = 'none';
-        dugem.innerHTML = 'Show Less';
+      function showMore() {
+        let tackice = document.getElementById('tackice');
+        let moreTekst = document.getElementById('more-text');
+        let dugem = document.getElementById('dugme');
+        if (tackice.style.display === 'none') {
+          moreTekst.style.display = 'none';
+          tackice.style.display = 'inline';
+          dugem.innerHTML = 'Show More';
+        } else {
+          moreTekst.style.display = 'flex';
+          tackice.style.display = 'none';
+          dugem.innerHTML = 'Show Less';
+        }
       }
     </script>
   </body>
