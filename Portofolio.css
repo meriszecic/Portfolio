@@ -5,11 +5,16 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+*::selection{
+    /* color: rgb(255, 0, 76); */
+    background-color:  #000; ;
+}
 .container{
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+        overflow: hidden;
+        flex-direction: column;
 }
 .top-content{
     width: 100%;
@@ -19,6 +24,7 @@
     background-color: #333;
 }
 .top-content-text{
+    animation: transitionIn 2.5s;
     height: 100%;
     width: 55%;
     color: rgba(255, 255, 255, 0.884);
@@ -26,9 +32,9 @@
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 0 0 3%;
+    padding: 0 0 0 7%;
 }
-.top-content-text label:first-child{
+.label1{
     font-size: 35px;
     color: rgba(245, 245, 245, 0.801);
     margin: 0 0 3% 0;
@@ -45,7 +51,69 @@
     color: rgba(245, 245, 245, 0.801);
 }
 .label3{
-    font-size: 20px;
-    margin: 10% 0 0 0;
+    font-size: 17px;
+    margin: 7% 0 0 0;
+    text-align: justify;
+    max-width: 78ch;
+}
+#dugme{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(197, 197, 197);
+    margin: 1% 0 0 0;
+}
+#dugme:hover{
+    color: rgba(255, 0, 76);
+    transition: .5s;
+}
+.top-content-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    animation: transitionOut 2.5s;
+}
+.github-link{
+    color: rgba(255, 0, 76);
+}
+.top-border{
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    width: 50px;
+    position: absolute;
+    height: 50px;
+    top: 8%;
+    left: 2%;
+}
+.botton-border{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    width: 50px;
+    position: absolute;
+    height: 50px;
+    bottom: 8%;
+    left: 50%;
+}
+@keyframes transitionIn {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
     
+}
+@keyframes transitionOut {
+    0%{
+        opacity: 0;
+        transform: translateX(100%)
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0)
+    }
+
 }
