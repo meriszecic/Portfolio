@@ -99,6 +99,31 @@
     width: 50%;
     border: 1px solid white;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.image{
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.top-content-image-elements{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+.top-content-image-elements li{
+    list-style-type: none;
+}
+.top-content-image-elements li a{
+    color: white;
+    text-decoration: none;
 }
 @keyframes transitionIn {
     0%{
