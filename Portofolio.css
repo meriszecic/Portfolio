@@ -109,7 +109,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    max-width: 60%;
 }
 .top-content-image-elements{
     display: flex;
@@ -124,6 +124,22 @@
 .top-content-image-elements li a{
     color: white;
     text-decoration: none;
+}
+.info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    color: white;
+}
+.info label:first-child{
+    color: white;
+    font-size: 20px;
+}
+.info label:last-child{
+    font-size: 20px;
 }
 @keyframes transitionIn {
     0%{
