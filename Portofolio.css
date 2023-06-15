@@ -1,4 +1,13 @@
-    /* color: rgb(255, 0, 76); */
+:root{
+    --selection-color:#000;
+    --bg-color:#333; 
+    --bg2-color:#242424;
+    --white-color:white;
+    --red-color:rgb(255, 0, 76);
+    --top-content-text: rgba(255, 255, 255, 0.884);
+    --label-one-color: rgba(245, 245, 245, 0.801);
+    --button-color:rgb(197, 197, 197);
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,8 +15,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 *::selection{
-    /* color: rgb(255, 0, 76); */
-    background-color:  #000; ;
+    background-color:  var(--selection-color); 
 }
 .container{
     width: 100%;
@@ -16,19 +24,25 @@
     overflow: hidden;
     flex-direction: column;
 }
+.content{
+    width:55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .top-content{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #333;
+    background-color: var(--bg-color);
 }
 .top-content-text{
     animation: transitionIn 2.5s;
     height: 100%;
-    width: 55%;
-    color: rgba(255, 255, 255, 0.884);
+    width: 100%;
+    color: var(--top-content-text);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -38,7 +52,7 @@
 .label1{
     padding-left: 5%;
     font-size: 35px;
-    color: rgba(245, 245, 245, 0.801);
+    color: var(--label-one-color);
     margin: 0 0 3% 0;
 }
 .top-content-text h1{
@@ -53,7 +67,7 @@
     padding-left: 5%;
     margin: 5% 0 0 0;
     font-size: 20px;
-    color: rgba(245, 245, 245, 0.801);
+    color: var(--label-one-color);
 }
 .label3{
     font-size: 17px;
@@ -67,11 +81,11 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    color: rgb(197, 197, 197);
+    color: var(--button-color);
     margin: 1% 0 0 0;
 }
 #dugme:hover{
-    color: rgba(255, 0, 76);
+    color: var(--red-color);
     transition: .5s;
 }
 .top-content-image{
@@ -82,11 +96,11 @@
     animation: transitionOut 2.5s;
 }
 .github-link{
-    color: rgba(255, 0, 76);
+    color: var(--red-color);
 }
 .top-border{
-    border-left: 2px solid white;
-    border-top: 2px solid white;
+    border-left: 2px solid var(--white-color);
+    border-top: 2px solid var(--white-color);
     width: 6%;
     height: 6%;
     display: flex;
@@ -95,8 +109,8 @@
     border-top-left-radius  : 5px;
 }
 .botton-border{
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
+    border-right: 2px solid var(--white-color);
+    border-bottom: 2px solid var(--white-color);
     width: 6%;
     height: 6%;
     display: flex;
@@ -107,28 +121,32 @@
 }
 .top-content-image{
     width: 45%;
-    margin: 0 1.5% 0 0 ;
-    /* border: 1px solid white; */
-    height: 95%;
+    margin: 0 1.3% 0 0 ;
+    height: 97%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #242424;
-    box-shadow: .1px .1px 20px black;
+    background-color: var(--bg2-color);
+    box-shadow: .1px .1px 25px var(--selection-color);
     flex-direction: column;
+    border-radius: 5px;
 }
 .image{
-    border: 1px solid white;
     display: flex;
     align-items: center;
-    justify-content: center;
     max-width: 60%;
+    justify-content: center;
+    border-image: linear-gradient(var(--white-color), var(--bg2-color)) 30;
+    border-bottom: none;
+    border-width: 1.8px;
+    border-radius: 5px;
+    border-style: solid;
 }
 .top-content-image-elements{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    color: rgba(255, 0, 76);
+    color: var(--red-color);
     align-items: center;
     width: 30%;
     margin: 1% 0 3% 0;
@@ -137,7 +155,7 @@
     list-style-type: none;
 }
 .top-content-image-elements li a{
-    color: white;
+    color: var(--white-color);
     text-decoration: none;
 }
 .info{
@@ -147,15 +165,31 @@
     flex-direction: column;
     gap: 20px;
     width: 60%;
-    color: white;
+    color: var(--white-color);
 }
 .info label:first-child{
-    color: white;
+    color: var(--white-color);
     font-size: 20px;
 }
 .info label:last-child{
     font-size: 20px;
 }
+.forma{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 3%;
+    border: 1px solid white;
+    gap: 20px;
+    border-top: none;
+    background-color: var(--label-one-color);
+    margin: 0 0 0 40%;
+    color: var(--selection-color);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 @keyframes transitionIn {
     0%{
         opacity: 0;
@@ -176,5 +210,4 @@
         opacity: 1;
         transform: translateX(0)
     }
-
 }
