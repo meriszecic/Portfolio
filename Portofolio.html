@@ -14,10 +14,6 @@
     <div class="container">
       <div class="top-content">
         <div class="content">
-          <select name="" id="" class="forma">
-            <option value="light" selected>dark theme</option>
-            <option value="light">light theme</option>
-          </select>
           <div class="top-content-text">
             <div class="top-border"></div>
             <label class="label1">Welcome to my portfolio</label>
@@ -64,6 +60,10 @@
           </div>
         </div>
         <div class="top-content-image">
+          <div class="icon">
+            <img width="5%" src="sun.png" id="icon" alt="light theme" />
+            <!-- <img width="5%" src="moon.png" alt="dark theme" /> -->
+          </div>
           <div class="image">
             <img
               src="Profilna.jpeg"
@@ -139,6 +139,16 @@
           dugem.innerHTML = 'Show Less';
         }
       }
+
+      let icon = document.getElementById('icon');
+      icon.onclick = function () {
+        document.body.classList.toggle('light-theme');
+        if (document.body.classList.contains('light-theme')) {
+          icon.src = 'moon.png';
+        } else {
+          icon.src = 'sun.png';
+        }
+      };
     </script>
   </body>
 </html>
