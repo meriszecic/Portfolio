@@ -137,7 +137,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--bg2-color);
-    box-shadow: .1px .1px 30px var(--selection-color);
+    box-shadow: .1px .1px 35px var(--selection-color);
     flex-direction: column;
     border-radius: 5px;
 }
