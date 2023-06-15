@@ -21,6 +21,7 @@
     height: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: #333;
 }
 .top-content-text{
@@ -32,31 +33,37 @@
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 0 0 5%;
+    padding: 0 0 0 2%;
 }
 .label1{
+    padding-left: 5%;
     font-size: 35px;
     color: rgba(245, 245, 245, 0.801);
     margin: 0 0 3% 0;
 }
 .top-content-text h1{
+    padding-left: 5%;
     font-size: 75px;
 }
 .top-content-text h2{
+    padding-left: 5%;
     font-size: 55px;
 }
 .label2{
+    padding-left: 5%;
     margin: 5% 0 0 0;
     font-size: 20px;
     color: rgba(245, 245, 245, 0.801);
 }
 .label3{
     font-size: 17px;
+    padding-left: 5%;
     margin: 7% 0 0 0;
     text-align: justify;
-    max-width: 78ch;
+    max-width: 83ch;
 }
 #dugme{
+    padding-left: 5%;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -80,28 +87,34 @@
 .top-border{
     border-left: 2px solid white;
     border-top: 2px solid white;
-    width: 50px;
-    position: absolute;
-    height: 50px;
-    top: 8%;
-    left: 2%;
+    width: 6%;
+    height: 6%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-top-left-radius  : 5px;
 }
 .botton-border{
     border-right: 2px solid white;
     border-bottom: 2px solid white;
-    width: 50px;
-    position: absolute;
-    height: 50px;
-    bottom: 8%;
-    left: 47%;
+    width: 6%;
+    height: 6%;
+    display: flex;
+    margin-left: 83%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-bottom-right-radius: 5px;
 }
 .top-content-image{
-    width: 50%;
-    border: 1px solid white;
-    height: 100%;
+    width: 45%;
+    margin: 0 1.5% 0 0 ;
+    /* border: 1px solid white; */
+    height: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #242424;
+    box-shadow: .1px .1px 20px black;
     flex-direction: column;
 }
 .image{
@@ -115,8 +128,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    color: rgba(255, 0, 76);
     align-items: center;
     width: 30%;
+    margin: 1% 0 3% 0;
 }
 .top-content-image-elements li{
     list-style-type: none;
@@ -131,7 +146,7 @@
     justify-content: space-evenly;
     flex-direction: column;
     gap: 20px;
-    width: 50%;
+    width: 60%;
     color: white;
 }
 .info label:first-child{
