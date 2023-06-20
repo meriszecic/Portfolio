@@ -4,6 +4,7 @@
     --bg2-color:#242424;
     --white-color:white;
     --red-color:rgb(255, 0, 76);
+    --red-color-links:rgba(255, 0, 76, 0.342);
     --top-content-text: rgba(255, 255, 255, 0.884);
     --label-one-color: rgba(245, 245, 245, 0.801);
     --button-color:rgb(197, 197, 197);
@@ -168,6 +169,10 @@
     color: var(--white-color);
     text-decoration: none;
 }
+.top-content-image-elements li a:hover{
+    color: var(--red-color-links);
+    transition: .3s;
+}
 .info{
     display: flex;
     align-items: flex-start;
@@ -213,10 +218,10 @@
         transform: translateX(0)
     }
 }
-@media screen and (max-width: 428px) {
+/* @media screen and (max-width: 428px) {
     
     .top-content{
         background-color: #fff;
     }
     
-}
+} */
