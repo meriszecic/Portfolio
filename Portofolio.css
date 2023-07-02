@@ -237,6 +237,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 5% 0 0 0;
     }
     .top-content-text h1{
         font-size: 50px
@@ -274,5 +275,14 @@
     }
     .top-content-image-elements li a i {
         font-size: 20px;
+    }
+    .info{
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        gap:0;
+        flex-wrap: nowrap;
+        height: 25%;
+        margin-top: 2%;
     }
 }
